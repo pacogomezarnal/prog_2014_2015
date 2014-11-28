@@ -5,11 +5,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
 
 public class Desplegable extends JFrame {
 
 	private JPanel contentPane;
+	JComboBox comboBox = new JComboBox();
 
 	/**
 	 * Launch the application.
@@ -38,7 +41,7 @@ public class Desplegable extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
+
 		comboBox.setBounds(10, 24, 162, 20);
 		contentPane.add(comboBox);
 		
@@ -48,6 +51,14 @@ public class Desplegable extends JFrame {
 		comboBox.addItem("Pedro");
 		
 		comboBox.setSelectedItem("Pepo");
+		
+		
+		
+		comboBox.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent arg0) {
+				System.out.println(comboBox.getSelectedItem());
+			}
+		});
 	}
 
 }
