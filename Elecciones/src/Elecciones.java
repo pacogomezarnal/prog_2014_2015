@@ -49,17 +49,11 @@ public class Elecciones extends JFrame {
 		contentPane.add(comboBox);
 		
 		//añadimos elementos
-		String monedas[]=new String[5];
-		monedas[0]="Libras";
-		monedas[1]="Dolares";
-		monedas[2]="Euros";
-		monedas[3]="Yen";
-		monedas[4]="Marco";
-		comboBox.addItem(monedas[0]);
-		comboBox.addItem(monedas[1]);
-		comboBox.addItem(monedas[2]);
-		comboBox.addItem(monedas[3]);
-		comboBox.addItem(monedas[4]);
+		comboBox.addItem("Libras");
+		comboBox.addItem("Dolares");
+		comboBox.addItem("Euros");
+		comboBox.addItem("Yen");
+		comboBox.addItem("Marco");
 		
 		//Evento seleccion de item
 		comboBox.addItemListener(new ItemListener() {
