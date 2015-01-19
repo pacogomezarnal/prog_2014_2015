@@ -10,6 +10,9 @@ public class Continente {
 		c1.setNombreCiudad("Alicante");
 		System.out.println(c1.getNombreCiudad());
 		
+		//Acceder a atributos publicos
+		c2.poblacion=-1000;
+		
 	}
 
 }
