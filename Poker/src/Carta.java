@@ -5,10 +5,12 @@ public class Carta {
 	private int numero;
 	//Palo de la baraja
 	private String palo;
+	
 	static final String PICAS="PICAS";
 	static final String CORAZONES="CORAZONES";
 	static final String DIAMANTES="DIAMANTES";
 	static final String TREBOLES="TREBOLES";
+	static final String[] PALOS={PICAS,CORAZONES,DIAMANTES,TREBOLES};
 	
 	public Carta() {
 		this(1,Carta.PICAS);
