@@ -23,4 +23,12 @@ public class Baraja {
 			}
 		}
 	}
+	
+	public String toString(){
+		String baraja="";
+		for(int i=0;i<this.numCartas;i++){
+			baraja=baraja+cartas[i].toString()+"\n";
+		}
+		return baraja;
+	}
 }

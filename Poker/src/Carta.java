@@ -19,8 +19,27 @@ public class Carta {
 	}
 	
 	public Carta(int numero,String palo){
-		this.numero=numero;
+		this.setNumero(numero);
 		this.palo=palo;		
 	}
 
+	public String getPalo(){
+		return this.palo;
+	}
+	
+	public void setPalo(String palo){
+		this.palo=palo;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	
+	public String toString(){
+		return "La Carta tiene un numero "+this.numero+" y es del palo "+this.palo;
+	}
 }
