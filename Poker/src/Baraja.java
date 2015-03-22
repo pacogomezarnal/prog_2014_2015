@@ -13,10 +13,14 @@ public class Baraja {
 	}
 	
 	public void ordenar(){
-		//CREAMOS UN MAZO ORDENADO
-		int j=0;
-		for(int i=0;i<this.numCartas;i++){
-			
+		int posicion=0;
+		for(int i=0;i<Carta.PALOS.length;i++)
+		{
+			for(int j=1;j<14;j++){
+				Carta cartaActual=new Carta(j,Carta.PALOS[i]);
+				cartas[posicion]=cartaActual;
+				posicion++;
+			}
 		}
 	}
 }
