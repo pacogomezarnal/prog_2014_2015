@@ -1,8 +1,13 @@
+import java.util.ArrayList;
+
 
 public class Baraja {
 	//Mazo Cartas
 	private Carta cartas[];
 	private int numCartas;
+	
+	//Mazo de cartas con ArrayList
+	private ArrayList<Carta> mazoCartas = new ArrayList<Carta>();
 	
 	//TIPOS BARAJAS
 	static final int FRANCESA=52;
@@ -20,9 +25,12 @@ public class Baraja {
 				Carta cartaActual=new Carta(j,Carta.PALOS[i]);
 				cartas[posicion]=cartaActual;
 				posicion++;
+				//Para el caso del ArrayList
+				mazoCartas.add(cartaActual);
 			}
 		}
 	}
+	
 	
 	public String toString(){
 		String baraja="";
