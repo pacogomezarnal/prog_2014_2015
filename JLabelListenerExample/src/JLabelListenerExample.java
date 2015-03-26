@@ -7,12 +7,14 @@ import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 
 public class JLabelListenerExample extends 	JFrame{
 	// Objetos visuales del ejemplo
 	private	JPanel topPanel;
 	private JLabel label;
+	private JTextField texto;
 	
 	public JLabelListenerExample() {
 		// Caracteristicas gen;erales
@@ -27,15 +29,21 @@ public class JLabelListenerExample extends 	JFrame{
 		
 		//Etiqueta
 		label=new JLabel("Prueba de listener");
-		topPanel.add( label, BorderLayout.CENTER );
 		
 		label.addMouseListener(new MouseAdapter(){
 		    public void mouseClicked(MouseEvent evnt) {
 		        if (evnt.getClickCount() == 1) {
-		        	//Codigo que se quiera poner
+		        	texto.setText("Etiqueta clicada");
 		         }
 		     }
-		});		
+		});	
+		//Comprobacion de la seleccion
+		texto = new JTextField(20);
+		
+		topPanel.add( label, BorderLayout.CENTER );
+		topPanel.add(texto, BorderLayout.SOUTH);
+		
+	
 	}
 
 	public static void main(String[] args) {
