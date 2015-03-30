@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class Baraja {
@@ -34,8 +35,13 @@ public class Baraja {
 	
 	public String toString(){
 		String baraja="";
+		/*
 		for(int i=0;i<this.numCartas;i++){
 			baraja=baraja+cartas[i].toString()+"\n";
+		}*/
+		Iterator<Carta> it= mazoCartas.iterator();
+		while(it.hasNext()){
+			baraja=baraja+it.next().toString()+"\n";
 		}
 		return baraja;
 	}
