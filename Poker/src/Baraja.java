@@ -39,6 +39,7 @@ public class Baraja {
 		for(int i=0;i<this.numCartas;i++){
 			baraja=baraja+cartas[i].toString()+"\n";
 		}*/
+		//Usamos el iterator
 		Iterator<Carta> it= mazoCartas.iterator();
 		while(it.hasNext()){
 			baraja=baraja+it.next().toString()+"\n";
