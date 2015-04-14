@@ -6,7 +6,7 @@ public class Corredores {
 		modeloCorredores mCorredor;
 		
 		//Generado el objeto
-		corredoresDB=new ConexionDB("localhost","corredores","root","");
+		corredoresDB=ConexionDB.getInstance("localhost","usuarios","root","");
 
 		if(corredoresDB.connectDB()==true) {
 			System.out.println("CONECTADOS CON EXITO");

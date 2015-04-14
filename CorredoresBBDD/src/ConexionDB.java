@@ -17,13 +17,24 @@ public class ConexionDB {
 	//Conexion
 	private Connection conexion = null;// maneja la conexió
 	
-	public ConexionDB(String HOST,String BBDD,String USER,String PASS) {
+	//Instancia unica
+	private static ConexionDB instance = null;
+	
+	private ConexionDB(String HOST,String BBDD,String USER,String PASS) {
 		this.host=HOST;
 		this.bbdd=BBDD;
 		this.user=USER;
 		this.pass=PASS;
 		this.url="jdbc:mysql://"+this.host+"/"+this.bbdd;
 	}
+	
+	//Implementar SingleTon
+	public static ConexionDB getInstance(String HOST,String BBDD,String USER,String PASS) {
+	      if(instance == null) {
+	         instance = new ConexionDB(HOST,BBDD,USER,PASS);
+	      }
+	      return instance;
+	   }
 	
 	public boolean connectDB(){
 		try{
