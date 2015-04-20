@@ -7,8 +7,9 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JList;
 import javax.swing.JComboBox;
+import java.awt.FlowLayout;
 
-
+//Ejemplo de Lista
 public class ListadoVisual extends JFrame {
 
 	private JPanel contentPane;
@@ -40,9 +41,9 @@ public class ListadoVisual extends JFrame {
 		setContentPane(contentPane);
 	
 		
-		//Comienza el listado
+		//Listado de colores
 		String labels[] = { "A", "B", "C", "D","E", "F", "G", "H","I", "J" ,"A", "B", "C", "D","E", "F", "G", "H","I", "J"};
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JList list = new JList(labels);
 		JScrollPane scrollPane = new JScrollPane(list);
