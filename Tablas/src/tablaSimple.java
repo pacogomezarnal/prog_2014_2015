@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -59,8 +61,16 @@ public class tablaSimple extends JFrame {
 			};
 		
 		JTable table = new JTable(datos, nombresColumnas);
+		//Cambio de la fuente de la cabecera
+		table.getTableHeader().setFont(new Font("Arial",Font.BOLD,14));
+		//Ocultar el grid
+		table.setShowGrid(false);
+		//Cambiar la fuente
+		table.setFont(new Font("Tahoma",Font.ITALIC,10));
+		table.setBackground(Color.ORANGE);
 		
 		JScrollPane scrollPane = new JScrollPane(table); //Scroll Vertical
+		scrollPane.getViewport().setBackground(Color.ORANGE);
 		
 		
 		contentPane.add(scrollPane);
