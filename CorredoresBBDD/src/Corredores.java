@@ -1,9 +1,10 @@
 
 public class Corredores {
-
+	static ConexionDB corredoresDB;
+	static modeloCorredores mCorredor;
+	
 	public static void main(String[] args) {
-		ConexionDB corredoresDB;
-		modeloCorredores mCorredor;
+
 		
 		//Generado el objeto
 		corredoresDB=ConexionDB.getInstance("localhost","usuarios","root","");

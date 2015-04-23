@@ -38,26 +38,7 @@ public class tablaConModelo extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		//Datos para la tabla
-				String[] nombresColumnas = {"Nombre",
-		                "Apellidos",
-		                "Deporte",
-		                "Años",
-		                "Vegetariano"};
-				Object[][] datos = {
-					    {"Paco", "Gómez",
-					     "Snowboarding", new Integer(5), new Boolean(false)},
-					    {"Pedro", "Ramírez",
-					     "Football", new Integer(3), new Boolean(true)},
-					    {"Maria", "Sempere",
-					     "Basketball", new Integer(2), new Boolean(false)},
-					    {"Juan", "Domingo",
-					     "Football", new Integer(20), new Boolean(true)},
-					    {"Mercedes", "Luna",
-					     "Pool", new Integer(10), new Boolean(false)}
-					};
-				
-				JTable table = new JTable(datos, nombresColumnas);
+
 	}
 
 }
