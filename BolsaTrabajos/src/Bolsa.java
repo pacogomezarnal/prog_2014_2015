@@ -11,11 +11,11 @@ public class Bolsa implements Iterable{
 		this.maximo=maximo;
 	}
 	
-	public void add(Object objeto ) {
+	public void add(Object objeto) {
 		if (lista.size()<=maximo) {
 			lista.add(objeto);
-		}else { 
-			throw new RuntimeException("no caben mas");
+		}else{ 
+			throw new RuntimeException("No caban mas objetos en la clase Bolsa. Numero objetos maximo: "+this.maximo);
 		}
 	}
 
