@@ -60,6 +60,10 @@ public class MainController {
 	
 	//Lanzar corredores
 	public void showCorredores(){
-		
+		if(usuarioRegistrado==null){
+			vMain.mensajeInf("No se ha iniciado con usuario");
+		}else{
+			
+		}
 	}
 }
