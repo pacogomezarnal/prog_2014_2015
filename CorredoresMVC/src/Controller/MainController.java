@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Model.ConexionDB;
 import Model.UsuariosModel;
+import Model.User;
 import View.MainAppView;
 
 
@@ -16,6 +17,10 @@ public class MainController {
 	
 	//VentanaPrincipal
 	private MainAppView vMain;
+	
+	//Autenticador
+	private Autenticar auth;
+	private User usuarioRegistrado=null;
 
 	private MainController() {
 		//Creamos la conexion con la base de datos
@@ -25,6 +30,9 @@ public class MainController {
 		}else{
 			System.out.println("ERROR EN LA CONEXION");
 		}
+		//Creamos el objeto de autenticacion
+		auth=new Autenticar();
+		
 		this.showMain();
 	}
 	
@@ -48,5 +56,10 @@ public class MainController {
 		vMain.showInicial(usuarios);
 		//Hacemos visiblela pantalla inicial
 		vMain.setVisible(true);	
+	}
+	
+	//Lanzar corredores
+	public void showCorredores(){
+		
 	}
 }
