@@ -22,7 +22,7 @@ public class CorredoresView extends JPanel {
 				MainController.getInstance().showInicio();
 			}
 		});
-		btnNewButton.setBounds(10, 11, 430, 23);
+		btnNewButton.setBounds(10, 11, 357, 23);
 		add(btnNewButton);
 
 	}
