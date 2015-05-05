@@ -45,6 +45,8 @@ public class MainAppView extends JFrame {
 		
 		JMenuItem mntmInicial = new JMenuItem("Inicial");
 		mnPantallas.add(mntmInicial);
+		
+		//Acciones del item corredores
 		JMenuItem mntmCorredores = new JMenuItem(new AbstractAction("Corredores") {
 		    public void actionPerformed(ActionEvent ae) {
 		    	MainController.getInstance().showCorredores();
@@ -73,8 +75,15 @@ public class MainAppView extends JFrame {
 		this.iView.putUsuarios(usuarios);
 	}
 	
+	//Mostrar los diferentes paneles dentro del CardLayout
+	public void showInicial(){
+		CardLayout c= (CardLayout) this.panel.getLayout();
+		c.show(panel, "Inicial");
+	}
+	
 	public void showCorredores(){
-		
+		CardLayout c= (CardLayout) this.panel.getLayout();
+		c.show(panel, "Corredores");
 	}
 	
 	public void mensajeInf(String msj){

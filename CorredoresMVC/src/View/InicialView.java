@@ -9,15 +9,21 @@ import java.util.ArrayList;
 
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.JButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import javax.swing.JPasswordField;
+
+import Controller.MainController;
 
 public class InicialView extends JPanel {
-	private JTextField textField;
 	private ArrayList<String> usuarios;
-	JComboBox comboBox;
+	JComboBox usuario;
+	private JPasswordField pass;
 
-	/**
-	 * Create the panel.
-	 */
+	//Constructor
 	public InicialView() {
 		setBounds(0, 0, 400, 300);
 		setLayout(null);
@@ -32,21 +38,30 @@ public class InicialView extends JPanel {
 		lblPassword.setBounds(24, 56, 86, 14);
 		add(lblPassword);
 		
-		textField = new JTextField();
-		textField.setBounds(24, 81, 86, 20);
-		add(textField);
-		textField.setColumns(10);
+		usuario = new JComboBox();
+		usuario.setBounds(24, 25, 134, 20);
+		add(usuario);
 		
-		comboBox = new JComboBox();
-		comboBox.setBounds(24, 25, 86, 20);
-		add(comboBox);
+		pass = new JPasswordField();
+		pass.setBounds(24, 81, 134, 20);
+		add(pass);
+		
+		//Boton de comprobacion de usuario
+		JButton btnNewButton = new JButton("Comprobar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainController.getInstance().checkUser((String)usuario.getSelectedItem(),pass.getPassword());
+			}
+		});
+		btnNewButton.setBounds(24, 121, 134, 23);
+		add(btnNewButton);
 	}
 	
 	//Añadir Usuarios
 	public void putUsuarios(ArrayList<String> usuarios){
-		comboBox.removeAllItems();
+		usuario.removeAllItems();
 	    for(String s:usuarios){
-	    	comboBox.addItem(s);
+	    	usuario.addItem(s);
 	    }
 	    this.repaint();
 	}

@@ -1,5 +1,6 @@
 package Controller;
 
+import java.awt.CardLayout;
 import java.util.ArrayList;
 
 import Model.ConexionDB;
@@ -54,7 +55,7 @@ public class MainController {
 		vMain = new MainAppView();
 		//Cargamos datos de Usuarios
 		vMain.showInicial(usuarios);
-		//Hacemos visiblela pantalla inicial
+		//Hacemos visible la pantalla inicial
 		vMain.setVisible(true);	
 	}
 	
@@ -63,7 +64,19 @@ public class MainController {
 		if(usuarioRegistrado==null){
 			vMain.mensajeInf("No se ha iniciado con usuario");
 		}else{
-			
+			vMain.showCorredores();
 		}
+	}
+	
+	//Lanzar Inicio
+	public void showInicio(){
+		vMain.showInicial();
+	}
+	
+	//Comprobar usuarios
+	public void checkUser(String usuario,char[] pass){
+		//Aquí comprobaríamos el usuario
+		usuarioRegistrado=new User();
+		vMain.showCorredores();
 	}
 }
