@@ -19,8 +19,7 @@ import javax.swing.JPasswordField;
 
 import Controller.MainController;
 
-//Esta es una clase de mi compañero
-//que para dar por culo la modifico
+//Esta es la Vista principal
 public class InicialView extends JPanel {
 	private ArrayList<String> usuarios;
 	JComboBox usuario;
