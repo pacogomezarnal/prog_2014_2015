@@ -1,5 +1,6 @@
 import Controller.MainController;
 
+//Esta clase arranca la app
 public class AppCorredores {
 
 	
