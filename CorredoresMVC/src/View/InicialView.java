@@ -1,6 +1,7 @@
 package View;
 
 import javax.swing.JPanel;
+
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 
@@ -18,6 +19,8 @@ import javax.swing.JPasswordField;
 
 import Controller.MainController;
 
+//Esta es una clase de mi compañero
+//que para dar por culo la modifico
 public class InicialView extends JPanel {
 	private ArrayList<String> usuarios;
 	JComboBox usuario;
