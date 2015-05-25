@@ -11,6 +11,7 @@ public class Baraja {
 	private ArrayList<Carta> mazoCartas = new ArrayList<Carta>();
 	
 	//TIPOS BARAJAS
+	//NUMERO CARTAS
 	static final int FRANCESA=52;
 	
 	public Baraja() {
